@@ -50,9 +50,27 @@ func main() {
 		return // this will stop the program
 	}
 
-	fmt.Printf("What is better, a dog or a cat? ")
+	fmt.Printf("What is better, the RTX 3080 or RTX 3090? ")
 	var answer string
-	fmt.Scan(&answer)
+	var answer2 string // go will not allow you to have the same variable name in different scopes
+	fmt.Scan(&answer, &answer2)
 
-	fmt.Println(answer)
+	// We need to use " " because it has a space between the words and normally go does not recognize it
+	if answer+" "+answer2 == "RTX 3090" {
+		fmt.Println("You are correct!")
+	} else if answer+" "+answer2 == "rtx 3090" {
+		fmt.Println("You are correct!")
+	} else {
+		fmt.Println("You are wrong!")
+	}
+
+	fmt.Printf("How many cores does the Ryzen 9 3900X have? ")
+	var cores uint
+	fmt.Scan(&cores)
+
+	if cores == 12 {
+		fmt.Println("You are correct!")
+	} else {
+		fmt.Println("You are wrong!")
+	}
 }
