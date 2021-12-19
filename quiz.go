@@ -4,40 +4,6 @@ import "fmt"
 
 func main() {
 	fmt.Println("Welcome to my quiz game!")
-
-	/*
-		VARIABLES AND DATA TYPES
-		string => everything in a double quotation mark
-		int => whole numbers
-		uint => whole numbers with no negative numbers
-		float64 => decimal numbers
-		bool => true or false
-		name := "John" | short way
-		%v is a placeholder for the variable
-		%d does the same but for decimal numbers
-
-		PRINT AND SCAN
-		Scan let the user input data
-		\n is a new line
-
-		CONDITIONS
-		!= is not equal to
-		== is equal to
-		< is less than
-		> is greater than
-		<= is less than or equal to
-		>= is greater than or equal to
-
-		CONDITIONALS
-		if statement
-		if else statement
-
-		LOGICAL OPERATORS
-		&& is and
-		|| is or
-		! is not
-	*/
-
 	fmt.Printf("Enter\n your name: ")
 	var name string
 	fmt.Scan(&name)
@@ -86,3 +52,36 @@ func main() {
 	percent := (float64(score) / float64(num_questions)) * 100
 	fmt.Printf("That is %v%%. percent!", percent)
 }
+
+/*
+	VARIABLES AND DATA TYPES
+	string => everything in a double quotation mark
+	int => whole numbers
+	uint => whole numbers with no negative numbers
+	float64 => decimal numbers
+	bool => true or false
+	name := "John" | short way
+	%v is a placeholder for the variable
+	%d does the same but for decimal numbers
+
+	PRINT AND SCAN
+	Scan let the user input data
+	\n is a new line
+
+	CONDITIONS
+	!= is not equal to
+	== is equal to
+	< is less than
+	> is greater than
+	<= is less than or equal to
+	>= is greater than or equal to
+
+	CONDITIONALS
+	if statement
+	if else statement
+
+	LOGICAL OPERATORS
+	&& is and
+	|| is or
+	! is not
+*/
