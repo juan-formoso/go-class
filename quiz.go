@@ -50,6 +50,9 @@ func main() {
 		return // this will stop the program
 	}
 
+	score := 0
+	num_questions := 2
+
 	fmt.Printf("What is better, the RTX 3080 or RTX 3090? ")
 	var answer string
 	var answer2 string // go will not allow you to have the same variable name in different scopes
@@ -58,6 +61,7 @@ func main() {
 	// We need to use " " because it has a space between the words and normally go does not recognize it
 	if answer+" "+answer2 == "RTX 3090" {
 		fmt.Println("You are correct!")
+		score += 1 // we can also use score++ (but it works as an implement) or score = score + 1
 	} else if answer+" "+answer2 == "rtx 3090" {
 		fmt.Println("You are correct!")
 	} else {
@@ -70,7 +74,12 @@ func main() {
 
 	if cores == 12 {
 		fmt.Println("You are correct!")
+		score++
 	} else {
 		fmt.Println("You are wrong!")
 	}
+
+	fmt.Printf("You scored %v our of %v.\n", score, num_questions)
+	percent := (float64(score) / float64(num_questions)) * 100
+	fmt.Printf("That is %v%%. percent!", percent)
 }
