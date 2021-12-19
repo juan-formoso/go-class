@@ -31,6 +31,11 @@ func main() {
 		CONDITIONALS
 		if statement
 		if else statement
+
+		LOGICAL OPERATORS
+		&& is and
+		|| is or
+		! is not
 	*/
 
 	fmt.Printf("Enter\n your name: ")
@@ -59,11 +64,9 @@ func main() {
 	fmt.Scan(&answer, &answer2)
 
 	// We need to use " " because it has a space between the words and normally go does not recognize it
-	if answer+" "+answer2 == "RTX 3090" {
+	if answer+" "+answer2 == "RTX 3090" || answer+" "+answer2 == "rtx 3090" {
 		fmt.Println("You are correct!")
 		score += 1 // we can also use score++ (but it works as an implement) or score = score + 1
-	} else if answer+" "+answer2 == "rtx 3090" {
-		fmt.Println("You are correct!")
 	} else {
 		fmt.Println("You are wrong!")
 	}
